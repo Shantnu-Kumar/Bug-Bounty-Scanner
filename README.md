@@ -1,10 +1,12 @@
 **🔐 Bug Bounty Scanner**
+
 An end-to-end Python reconnaissance and vulnerability reporting tool for authorized bug bounty hunters. No third-party dependencies — runs on pure Python standard library.
 
 ⚠️ This tool is for authorized bug bounty targets only. Always ensure you have written permission or an active program scope (e.g. via YesWeHack, HackerOne, Bugcrowd) before scanning any target.
 
 
 ✨ **Features**
+
 PhaseWhat it does🔍 Passive ReconSubdomain enumeration via crt.sh + DNS brute-force of common prefixes🖥️ Port ScanningTCP connect scan across 20 common/risky ports🧪 Vuln Scanning10+ automated vulnerability and misconfiguration checks📄 ReportingAuto-generates .txt, .json, and styled .html reports
 Vulnerability Checks Included
 
@@ -21,6 +23,7 @@ Risky Open Services — FTP, Telnet, Redis, MongoDB, Elasticsearch, RDP, SMB, My
 
 
 **🚀 Quick Start**
+
 Requirements:
 Python 3.7+
 No pip installs needed — uses standard library only
@@ -34,7 +37,9 @@ Full findings table with evidence and remediation advice
 
 
 **🛠️ Architecture**
+
 bug_bounty_scanner.py
+
 ├── Data Models         (Finding, ScanResult)
 ├── Phase 1 – Recon     (crt.sh, DNS brute-force, tech fingerprinting)
 ├── Phase 2 – Ports     (TCP connect scan, 20 common ports)
@@ -42,12 +47,15 @@ bug_bounty_scanner.py
 └── Phase 4 – Reports   (TXT / JSON / HTML generators)
 
 **📊 Severity Levels**
+
 SeverityColorMeaningCRITICAL🔴Immediate risk — data exposure, unauthenticated accessHIGH🟠Significant risk — likely exploitableMEDIUM🟡Moderate risk — requires specific conditionsLOW🟢Minor risk — defense in depth issuesINFO🔵Informational — useful for further manual testing
 
 **⚙️ Flags Reference**
+
 FlagDefaultDescriptiontarget(required in CLI mode)Target domain to scan--output./bb_reportsDirectory to save reports--skip-portsfalseSkip TCP port scanning--skip-subdomainsfalseSkip subdomain enumeration
 
 **⚠️ Legal Disclaimer**
+
 This tool is intended exclusively for use on systems you own or have explicit written authorization to test, such as through an active bug bounty program on platforms like:
 
 YesWeHack
