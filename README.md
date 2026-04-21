@@ -1,5 +1,5 @@
-**🔐 Bug Bounty Scanner
-**An end-to-end Python reconnaissance and vulnerability reporting tool for authorized bug bounty hunters. No third-party dependencies — runs on pure Python standard library.
+**🔐 Bug Bounty Scanner**
+An end-to-end Python reconnaissance and vulnerability reporting tool for authorized bug bounty hunters. No third-party dependencies — runs on pure Python standard library.
 
 ⚠️ This tool is for authorized bug bounty targets only. Always ensure you have written permission or an active program scope (e.g. via YesWeHack, HackerOne, Bugcrowd) before scanning any target.
 
@@ -20,21 +20,20 @@ Information Disclosure — Version leakage via Server, X-Powered-By, X-Generator
 Risky Open Services — FTP, Telnet, Redis, MongoDB, Elasticsearch, RDP, SMB, MySQL exposed to internet
 
 
-**🚀 Quick Start
-**Requirements
-
+**🚀 Quick Start**
+Requirements:
 Python 3.7+
 No pip installs needed — uses standard library only
 
-**Output Report
-**Executive summary with severity breakdown cards
+**Output Report**
+Executive summary with severity breakdown cards
 Detected technologies
 Subdomains discovered
 Open ports table
 Full findings table with evidence and remediation advice
 
 
-🛠️ Architecture
+**🛠️ Architecture**
 bug_bounty_scanner.py
 ├── Data Models         (Finding, ScanResult)
 ├── Phase 1 – Recon     (crt.sh, DNS brute-force, tech fingerprinting)
@@ -42,13 +41,13 @@ bug_bounty_scanner.py
 ├── Phase 3 – Vulns     (VulnScanner class, 10+ checks)
 └── Phase 4 – Reports   (TXT / JSON / HTML generators)
 
-📊 Severity Levels
+**📊 Severity Levels**
 SeverityColorMeaningCRITICAL🔴Immediate risk — data exposure, unauthenticated accessHIGH🟠Significant risk — likely exploitableMEDIUM🟡Moderate risk — requires specific conditionsLOW🟢Minor risk — defense in depth issuesINFO🔵Informational — useful for further manual testing
 
-⚙️ Flags Reference
+**⚙️ Flags Reference**
 FlagDefaultDescriptiontarget(required in CLI mode)Target domain to scan--output./bb_reportsDirectory to save reports--skip-portsfalseSkip TCP port scanning--skip-subdomainsfalseSkip subdomain enumeration
 
-⚠️ Legal Disclaimer
+**⚠️ Legal Disclaimer**
 This tool is intended exclusively for use on systems you own or have explicit written authorization to test, such as through an active bug bounty program on platforms like:
 
 YesWeHack
@@ -56,5 +55,4 @@ HackerOne
 Bugcrowd
 Intigriti
 
-Unauthorized use of this tool against systems you do not have permission to test may violate laws including the Computer Fraud and Abuse Act (CFAA), UAE Cybercrime Law, and similar legislation in your jurisdiction.
-The author assumes no liability for misuse.
+Unauthorized use of this tool against systems you do not have permission to test may violate laws including the Computer Fraud and Abuse Act (CFAA). The author assumes no liability for misuse.
