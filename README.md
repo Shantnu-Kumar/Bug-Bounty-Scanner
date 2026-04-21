@@ -41,9 +41,13 @@ Full findings table with evidence and remediation advice
 bug_bounty_scanner.py
 
 ├── Data Models         (Finding, ScanResult)
+
 ├── Phase 1 – Recon     (crt.sh, DNS brute-force, tech fingerprinting)
+
 ├── Phase 2 – Ports     (TCP connect scan, 20 common ports)
+
 ├── Phase 3 – Vulns     (VulnScanner class, 10+ checks)
+
 └── Phase 4 – Reports   (TXT / JSON / HTML generators)
 
 **📊 Severity Levels**
